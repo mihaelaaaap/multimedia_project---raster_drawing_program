@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Drawing App</title>
+        <link rel="stylesheet" type="text/css" href="1_1097_PETCU_Mihaela.css"/>
+        <link rel="icon" type="image/x-icon" href="./media/icon.ico">
+    </head>
+    <body>
+        <div class="container">
+                
+            <div class="navbar">
+                <div id="file_dropdown_menu">
+                    <button id="file_dropdown_btn">File</button>
+                    <div class="dropdown_options" id="file_options">
+                        <button onclick="newFile()">New File</button>
+                        <button id="raster_btn" onclick="saveRaster()">Save as JPEG</button>
+                        <button id="svg_btn" onclick="saveSVG()">Save as SVG</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my_drawing_app">
+                <div class="toolbar">
+                    <h3>Tools</h3>
+
+                    <div class="tools">
+                        <ul class="shapes">
+                            <label>Shapes</label>
+                            <li class="shape">
+                                <img src="./media/line.ico" alt=""/>
+                                <span id="line">Line</span>
+                            </li>
+                            <li class="shape">
+                                <img src="./media/ellipse.ico" alt=""/>
+                                <span id="ellipse">Ellipse</span>
+                            </li>
+                            <li class="shape">
+                                <img src="./media/square.ico" alt=""/>
+                                <span id="rectangle">Rectangle</span>
+                            </li>
+                            <li class="shape">
+                                <img src="./media/circle.ico" alt=""/>
+                                <span id="circle">Circle</span>
+                            </li>
+                            <li class="shape">
+                                <img src="./media/triangle.ico" alt=""/>
+                                <span id="triangle">Triangle</span>
+                            </li>
+                        </ul>
+
+                        <ul class="settings">
+                            <label>Settings</label>
+                            <li class="setting">
+                                <input type="color" id="shape_color_picker">
+                                <span>Color</span>
+                            </li>
+                            <li class="setting">
+                                <input type="color" id="background_color_picker" value="#FFFFFF" onchange="setBackgroundColor(this.value)"/>
+                                <span>Background</span>
+                            </li>
+                            <li class="setting">
+                                <input type="range" id="line_width" min="1" max="100" value="50" onchange="setLineWidth(this.value)">
+                                <label for="line_width" id="line_width_label">Line width 50px</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <h1>Sketch up your ideas, it's easy!</h1>
+                    <canvas id="canvas" width="800" height="600"></canvas>
+                </div>
+
+                <div class="layers_bar">
+                    <h3>Your shapes</h3>
+                    <ul id="layers">
+                        <!-- dinamically populated -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="./1_1097_PETCU_Mihaela.js"></script>
+    </body>
+</html>

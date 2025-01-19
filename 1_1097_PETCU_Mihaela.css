@@ -1,0 +1,247 @@
+/* color palette available at https://colorhunt.co/palette/a79277d1bb9eead8c0fff2e1 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2E1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #FFF2E1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D1BB9E;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#file_dropdown_menu {
+    position: relative;
+}
+
+#file_dropdown_btn, .dropdown_options button {
+    background-color: #A79277;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.dropdown_options {
+    display: none;
+    position: absolute;
+    background-color: #A79277;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#file_dropdown_menu:hover .dropdown_options {
+    display: block;
+}
+
+.dropdown_options button:hover {
+    color: #EAD8C0;
+}
+
+
+.my_drawing_app {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #D1BB9E;
+    padding: 20px;
+    width: 180px;
+    border-radius: 8px;
+    gap: 20px;
+}
+
+.toolbar img {
+    width: 16px;
+    height: 16px;
+}
+
+.tools {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.shapes li:hover span {
+    color: #EAD8C0;
+}
+
+.toolbar h3 {
+    font-size: 20px; 
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+}
+
+#line_width_label {
+    font-weight: normal;
+    font-size: 15px;
+    color: #000000;
+}
+
+span {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.shapes li {
+    cursor: pointer;
+}
+
+.setting {
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    color: #000;
+    align-items: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    background: #000000;
+    outline: none;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.setting span {
+    color: #000000;
+    text-align: left;
+    margin-top: 4px;
+    align-self: flex-start;
+    display: inline-block;
+    width: 40px; 
+    margin-right: 5px;
+}
+
+#shape_color_picker, #background_color_picker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-color: #FFFFFF;
+}
+
+.setting-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#line_width {
+    color: #000;
+    height: 5px;
+    margin-top: 10px;
+}
+
+#shape_color_picker, #background_color_picker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #FDF3E1;
+    border-radius: 8px;
+}
+
+.center h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+#canvas {
+    background-color: #FFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+    width: 800px;
+    height: 600px;
+}
+
+.layers_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D1BB9E;
+    padding: 10px;
+    width: 130px;
+    border-radius: 8px;
+}
+
+.layers_bar h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center;
+}
