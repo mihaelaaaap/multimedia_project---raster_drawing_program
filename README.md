@@ -1,2 +1,3 @@
-# multimedia_project---raster_drawing_program
-Raster drawing program using the canvas element
+# Raster drawing program using the canvas element
+
+The user can draw various shapes using a canvas element and export the final result in raster and/or vector format (JPEG, JPG, SVG).
